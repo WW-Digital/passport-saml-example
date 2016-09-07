@@ -1,3 +1,4 @@
+const request = require('request');
 
 module.exports = function (app, config, passport) {
 
