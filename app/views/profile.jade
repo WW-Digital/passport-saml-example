@@ -6,5 +6,8 @@ block content
 	dl
 		dt Id
 		dd #{user.id}
+		dt Roles
+		for role in user.roles
+			dd #{role}
 
 	a(href="/logout") Logout

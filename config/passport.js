@@ -18,8 +18,9 @@ module.exports = function (passport, config) {
       cert: config.passport.saml.cert
     },
     function (profile, done) {
+      var roles = config.passport.roleMapper(profile['member-of'] || []);
       return done(null,
-        {id: profile.nameID}
+        {id: profile.nameID, roles: roles}
       );
     })
   );
