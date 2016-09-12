@@ -20,7 +20,7 @@ module.exports = function (passport, config) {
     function (profile, done) {
       var roles = config.passport.roleMapper(profile['member-of'] || []);
       return done(null,
-        {id: profile.nameID, roles: roles}
+        {id: profile.nameID, roles: roles, adGroups: profile['member-of']}
       );
     })
   );
