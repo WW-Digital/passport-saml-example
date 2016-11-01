@@ -1,0 +1,10 @@
+version: '2'
+services:
+  # data containers
+  app:
+    build: .
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./sailpoint-auth-example:/app/sailpoint-auth-example
+

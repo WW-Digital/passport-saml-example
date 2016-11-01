@@ -22,9 +22,9 @@
     "url": "https://github.com/gbraad/passport-saml-example.git"
   },
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon ./sailpoint-auth-example/app.js",
     "test": "",
-    "postinstall": "bower install"
+    "postinstall": ""
   },
   "dependencies": {
     "body-parser": "1.15.1",
@@ -36,7 +36,8 @@
     "morgan": "1.7.0",
     "nodemon": "1.9.2",
     "passport": "0.3.2",
-    "passport-saml": "0.15.0"
+    "passport-saml": "0.15.0",
+    "request": "*"
   },
   "devDependencies": {
     "bower": "1.7.9"
