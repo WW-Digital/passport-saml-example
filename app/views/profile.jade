@@ -9,5 +9,8 @@ block content
 		dt Roles
 		for role in user.roles
 			dd #{role}
+		dt AD Groups
+		for group in user.adGroups
+			dd #{group}
 
 	a(href="/logout") Logout
