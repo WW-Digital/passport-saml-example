@@ -41,7 +41,7 @@ var roleMapper = function (groupFilter, groupToRole) {
       passport: {
         strategy: 'saml',
         saml: {
-          path: process.env.SAML_PATH || '/login/callback',
+          path: process.env.SAML_PATH || 'http://ww-saml-reference.herokuapp.com/login/callback',
           entryPoint: process.env.SAML_ENTRY_POINT || 'https://stg01-useast1-sso.identitynow.com/sso/SSORedirect/metaAlias/ww-sandbox/idp',
           issuer: process.env.SAML_ISSUER || 'passport-saml',
           cert: process.env.SAML_CERT || fs.readFileSync('./cert-qat2.pem', 'utf-8'),
