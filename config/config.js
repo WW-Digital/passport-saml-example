@@ -43,7 +43,7 @@ var roleMapper = function (groupFilter, groupToRole) {
         saml: {
           path: process.env.SAML_PATH || '/login/callback',
           entryPoint: process.env.SAML_ENTRY_POINT || 'https://stg01-useast1-sso.identitynow.com/sso/SSORedirect/metaAlias/ww-sandbox/idp',
-          issuer: process.env.SAML_ISSUER || 'ww-sample-reference',
+          issuer: process.env.SAML_ISSUER || 'https://ww-saml-reference.herokuapp.com/sp',
           cert: process.env.SAML_CERT || fs.readFileSync('./cert-qat2.pem', 'utf-8'),
           logoutUrl: process.env.SAML_LOGOUT_URL || 'https://ww-sandbox.identitynow.com/logout'
         },
